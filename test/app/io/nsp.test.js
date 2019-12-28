@@ -14,7 +14,7 @@ function client(nsp = '', opts = {}) {
   return ioc.connect(url, Object.assign({}, opts, { forceNew: true, transports: [ 'websocket' ] }));
 }
 
-describe.only('test/app/io/nsp.test.js', () => {
+describe('test/app/io/nsp.test.js', () => {
   const emitBody = { command: 'who am i' };
   const app = mock.cluster({});
   let socket;

@@ -9,6 +9,7 @@ class NspController extends Controller {
     const socket = ctx.socket;
     try {
       socket.emit('res', message);
+      // 这里console不出，为什么?
       console.log('into exchange()...');
       if (ctx.session.user) {
         // do someing...
